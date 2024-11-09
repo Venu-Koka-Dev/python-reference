@@ -25,7 +25,42 @@ Manual
 5. Create a file called demo.txt in "b" directory 
    echo Hello World %date% %time% > demo.txt
 6. Delete the entire folder structure 
-   rmdir /S /Q working 
+   rmdir /S /Q working
+
+
+
+
+
+
+
+
+Windows Commands - 30 commands
+AI
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   
 
 Automation 
 1. Create
