@@ -28,6 +28,17 @@ Manual
    rmdir /S /Q working
 
 
+   Run Commands:
+
+python starter.py
+python C:\Users\91703\Desktop\pylearn\starter.py
+python .\Desktop\pylearn\starter.py 
+
+C:\Users\91703\AppData\Local\Programs\Python\Python313\python.exe C:\Users\91703\Desktop\pylearn\starter.py
+
+python C:\Users\91703\Desktop\pylearn\starter.py
+
+
 Windows Commands - 30 commands
 AI
 
