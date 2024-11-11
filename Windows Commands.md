@@ -28,14 +28,11 @@ Manual
    rmdir /S /Q working
 
 
-
-
-
-
-
-
 Windows Commands - 30 commands
 AI
+
+Automate - Use Scripting - Script
+
 
 
 
