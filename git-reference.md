@@ -35,4 +35,9 @@ $ git commit -m "Added a new file - first.py"
 (Optional) If you want to bypass staging and directly commit all changes, you can use:
 $ git commit -am "Your commit message"
 
+10. To check the status of the git repo
+$ git status
+
+11. 
+
 
