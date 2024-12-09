@@ -45,10 +45,27 @@ Note: (PEP) Python Enhancement Proposal is a document specifying the features if
 
 Step 1 : Install Git software on your computer by going to the official website for your specific OS
 Step 2 : To check if Git is installed
-git --version
+$ git --version
 
-Step 3 : Create a folder/dir & cd to that directory
-Step 4 : Initialize it to make it a Git repository (repo) : This creates a .git folder in your project directory, marking it as a Git repository
+Step 3 : One time setup to get and set configuration variables
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+$ git config --global init.defaultBranch main
+
+(Optional) To view all of your configuration settings and where they are coming from using
+$ git config --list --show-origin
+$ git config --list
+user.name=John Doe
+user.email=johndoe@example.com
+color.status=auto
+color.branch=auto
+color.interactive=auto
+color.diff=auto
+$ git config user.name
+John Doe
+
+Step 4 : Create a folder/dir & cd to that directory
+Step 5 : Initialize it to make it a Git repository (repo) : This creates a .git folder in your project directory, marking it as a Git repository
 git init
 
 Note : A .git hidden folder is created. On deleting this folder manually we can uninitialise or make the git repo a normal folder
@@ -59,14 +76,18 @@ git config --global init.defaultBranch <newbranchname>
 (Optional) The rename a newly created branch:
 git branch -m <newbranchname>
 
-Step 5 : Create a new file called : one.py
-
-Step 6 : To stage the changes
+Step 6 : Create a new file called : one.py
+ - A checkout or working copy of all of its files in front of you
+ - Each file in your working directory can be in one of two states: tracked or untracked
+   a. Tracked - files that Git knows about
+   b. Untracked - 
+   
+Step 7 : To stage the changes
 git add one.py
 (or)
 git add .
 
-Step 7 : To commit changes from staging area to the repo
+Step 8 : To commit changes from staging area to the repo
 git commit -m "added a new file one.py"
 
 (Optional) To list all local branches
@@ -84,8 +105,9 @@ git branch -a
 
 
 
-
-
+## Remotes
+Step : To clone an existing remote repository
+$ git clone <https://github.com/libgit2/libgit2......>
 
 
 
