@@ -3,6 +3,14 @@
 2. F-strings or f-strings
 3. Key features of Strings
 4. String conversion methods
+5. Accessing Strings
+6. Slicing techniques
+7. String Operations
+    a. Concatenation
+    b. Repetition
+    c. Membership Testing
+8. String methods
+9. 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # I. What are Strings 
  - Any sequence of characters (digits, alphabets or special characters)
@@ -73,5 +81,107 @@ userName = str(userID)
 print(userName)  # "452345"
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# V. Accessing Strings
+ - Using indexing
+ - Python supports :
+    a. Positive indexing : 0 to length-1
+    b. Negative indexing : last item is -1
+   
+### Example 1 : Simple usage of indexing
+fName = "Venu"
+print(len(fName))
+
+print(fName[3])                     # "u"
+print(fName[len(fName) - 1])        # "u"
+print(fName[-1])                    # "u"
+
+#Slice of first two characters from the string literal (Using standard while loop)
+numOfCharacters = 2
+startIndex = 0 
+
+while startIndex < numOfCharacters:
+    print(fName[startIndex])
+    startIndex = startIndex + 1 
+
+#Slice of first two characters from the string literal (Using for-in loop)
+counter = int(input("How many characters do you need from the start of the string: "))
+for value in fName:
+    if counter == 0:
+        break
+    else: 
+        print(value)
+
+    counter = counter - 1
+
+### Example 2 : Using enumerate() function for extracting index value along with the actual value
+fName = "Venu"
+for index, value in enumerate(fName):
+    print(f'The character at {index} index is : {value}')
+
+    
+### Example 3 : Using index value to slice a string
+fName = "Venu"
+counter = int(input("How many characters do you need from the start of the string: "))
+for index, value in enumerate(fName):
+    if index < counter:
+        print(f'The character at {index} index is : {value}')
+    else:
+        break
 
 
+### Example 4 : Using Slicing techniques - varName[start:end:step]
+fName = "Venu"
+counter = int(input("How many characters do you need from the start of the string: "))
+print(fName[:counter])
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# VI. Slicing techniques
+Syntax:  varName[start:end:step]
+1. Default value of start : 0
+2. Default value of end : length - 1
+3. Default value of step : 1
+4. All values are optional
+5. Value at end index is excluded
+6. Value at start inex is included
+
+### Example 1: To get all values from a string
+fName = "Venu"
+print(fName[::])
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
+# VII. String Operations
+a. Concatenation / Appending
+Note: + is an overloaded operator (Addition operator & Concatenation operator)
+
+fName = "Venu"
+lName = "Koka"
+print("Mr." + fName + " " + lName)  
+
+b. Repetition
+Note: * is also an overloaded operator (Multiplication operator & Repetition operator)
+
+fName = "Venu"
+print(fName * 3)
+
+c. Membership Testing (Using in and not in operators)
+s = "Python"
+print('Py' in s)         # True
+print('Java' not in s)   # True
+print('y' in s)          # True
+print('x' in s)          # False
+print('x' not in s)      # True
+print("Py" in s)         # True (values should be continuous)
+print("Pt" in s)         # False 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# VIII. String Methods
+1. str.lower()	Converts all characters to lowercase.
+2. str.upper()	Converts all characters to uppercase.
+3. str.title()	Converts the first character of each word to uppercase.
+4. str.strip()	Removes leading and trailing whitespaces.
+5. str.replace(old, new)	Replaces all occurrences of old with new.
+6. str.split(delim)	Splits the string into a list using delim as a delimiter.
+7. str.join(iterable)	Joins elements of iterable with the string as a separator.
+8. str.find(sub)	Returns the lowest index of sub in the string (or -1 if not found).
+9. str.isdigit()	Returns True if all characters are digits.
+10. str.isalpha()	Returns True if all characters are alphabetic.
