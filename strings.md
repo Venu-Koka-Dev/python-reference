@@ -27,6 +27,8 @@
        print("This is Venu's cricket bat.")
        print("Venu said, \"Lets for a walk tomo\".")
        print('This is Venu\'s cricket bat.')
+ - Numeric String
+   Ex. print("123") 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------   
 # II. F-strings
  -  Formatted string literals
@@ -175,13 +177,13 @@ print("Pt" in s)         # False
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # VIII. String Methods
-1. str.lower()	Converts all characters to lowercase.
-2. str.upper()	Converts all characters to uppercase.
-3. str.title()	Converts the first character of each word to uppercase.
-4. str.strip()	Removes leading and trailing whitespaces.
-5. str.replace(old, new)	Replaces all occurrences of old with new.
-6. str.split(delim)	Splits the string into a list using delim as a delimiter.
-7. str.join(iterable)	Joins elements of iterable with the string as a separator.
-8. str.find(sub)	Returns the lowest index of sub in the string (or -1 if not found).
-9. str.isdigit()	Returns True if all characters are digits.
-10. str.isalpha()	Returns True if all characters are alphabetic.
+1. str.lower()	         : Converts all characters to lowercase [Original value is untouched]
+2. str.upper()	         : Converts all characters to uppercase [Original value is untouched]
+3. str.title()	         : Converts the first character of each word to uppercase [Original value is untouched]
+4. str.strip()	         : Removes leading and trailing whitespaces [Original value is untouched]
+5. str.replace(old, new) : Replaces all occurrences of old with new
+6. str.split(delim)	     : Splits the string into a list using delim as a delimiter
+7. str.join(iterable)	 : Joins elements of iterable with the string as a separator
+8. str.find(sub)	     : Returns the lowest index of sub in the string (or -1 if not found)
+9. str.isdigit()	     : Returns True if all characters are digits
+10. str.isalpha()	     : Returns True if all characters are alphabetic
