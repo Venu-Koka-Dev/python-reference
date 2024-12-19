@@ -177,18 +177,133 @@ print("Pt" in s)         # False
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # VIII. String Methods
+ - String methods to manipulate and analyze string objects
  - Methods are special functions called on a member/object/instance of a Class/Type
  - (API) Application Programming Interface
- - HTTP/ HTTP(s)
-   
-1. str.lower()	         : Converts all characters to lowercase [Original value is untouched]
-2. str.upper()	         : Converts all characters to uppercase [Original value is untouched]
-3. str.title()	         : Converts the first character of each word to uppercase [Original value is untouched]
-4. str.strip()	         : Removes leading and trailing whitespaces [Original value is untouched]
-5. str.replace(old, new) : Replaces all occurrences of old with new
-6. str.split(delim)	     : Splits the string into a list using delim as a delimiter
-7. str.join(iterable)	 : Joins elements of iterable with the string as a separator
-8. str.find(sub)	     : Returns the lowest index of sub in the string (or -1 if not found)
-9. str.isdigit()	     : Returns True if all characters are digits
-10. str.isalpha()	     : Returns True if all characters are alphabetic
+    
+ 1. str.lower()	                    : Converts all characters to lowercase [Original value is untouched]
+ 2. str.upper()	                    : Converts all characters to uppercase [Original value is untouched]
+ 3. str.title()	                    : Converts the first character of each word to uppercase [Original value is untouched]
+ 4. str.strip()	                    : Removes leading and trailing whitespaces [Original value is untouched]
+ 5. str.replace(old, new)            : Replaces all occurrences of old with new
+ 6. str.split(delim)	                : Splits the string into a list using delim as a delimiter
+ 7. str.join(iterable)	            : Joins elements of iterable with the string as a separator
+ 8. str.find(sub[, start[, end]])    : Returns the lowest index where the substring is found, or -1 if not found.
+ 9. str.isdigit()	                : Returns True if all characters are digits
+10. str.isalpha()	                : Returns True if all characters are alphabetic
+11. str.capitalize()                : Returns a copy of the string with the first character capitalized and the rest lowercased
+12. str.casefold()                  : Returns a case-folded version of the string (similar to lowercase but more aggressive)
+13. center(width[, fillchar])
+
+Centers the string within the specified width using a fill character (default is space).
+count(sub[, start[, end]])
+
+Counts the occurrences of a substring in the string.
+encode(encoding='utf-8', errors='strict')
+
+Returns an encoded version of the string.
+endswith(suffix[, start[, end]])
+
+Returns True if the string ends with the specified suffix.
+expandtabs(tabsize=8)
+
+Replaces tabs (\t) with spaces, using the given tab size.
+
+
+
+format(*args, **kwargs)
+
+Formats the string using placeholders.
+format_map(mapping)
+
+Similar to format(), but uses a mapping object.
+index(sub[, start[, end]])
+
+Returns the lowest index where the substring is found. Raises ValueError if not found.
+isalnum()
+
+Returns True if all characters are alphanumeric.
+
+isascii()
+
+Returns True if all characters are ASCII.
+isdecimal()
+
+Returns True if all characters are decimals.
+isdigit()
+
+Returns True if all characters are digits.
+isidentifier()
+
+Returns True if the string is a valid Python identifier.
+islower()
+
+Returns True if all characters are lowercase.
+isnumeric()
+
+Returns True if all characters are numeric.
+isprintable()
+
+Returns True if all characters are printable.
+isspace()
+
+Returns True if all characters are whitespace.
+istitle()
+
+Returns True if the string is title-cased.
+isupper()
+
+Returns True if all characters are uppercase.
+
+ljust(width[, fillchar])
+
+Left-justifies the string within the specified width.
+
+lstrip([chars])
+
+Removes leading characters (default is whitespace).
+maketrans(x[, y[, z]])
+
+Returns a translation table for use with translate().
+partition(sep)
+
+Splits the string into three parts: before, separator, and after.
+
+rfind(sub[, start[, end]])
+
+Returns the highest index where the substring is found, or -1 if not found.
+rindex(sub[, start[, end]])
+
+Returns the highest index where the substring is found. Raises ValueError if not found.
+rjust(width[, fillchar])
+
+Right-justifies the string within the specified width.
+rpartition(sep)
+
+Splits the string into three parts: before, separator, and after, starting from the end.
+rsplit(sep=None, maxsplit=-1)
+
+Splits the string from the right into a list.
+rstrip([chars])
+
+Removes trailing characters (default is whitespace).
+
+splitlines([keepends])
+
+Splits the string at line breaks.
+startswith(prefix[, start[, end]])
+
+Returns True if the string starts with the specified prefix.
+
+swapcase()
+
+Swaps the case of all characters.
+
+translate(table)
+
+Applies a translation table to the string.
+
+zfill(width)
+
+Pads the string with zeros on the left to make it the specified width.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
