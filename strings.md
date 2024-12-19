@@ -10,7 +10,6 @@
     b. Repetition
     c. Membership Testing
 8. String methods
-9. 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # I. What are Strings 
  - Any sequence of characters (digits, alphabets or special characters)
