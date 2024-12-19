@@ -177,6 +177,10 @@ print("Pt" in s)         # False
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # VIII. String Methods
+ - Methods are special functions called on a member/object/instance of a Class/Type
+ - (API) Application Programming Interface
+ - HTTP/ HTTP(s)
+   
 1. str.lower()	         : Converts all characters to lowercase [Original value is untouched]
 2. str.upper()	         : Converts all characters to uppercase [Original value is untouched]
 3. str.title()	         : Converts the first character of each word to uppercase [Original value is untouched]
@@ -187,3 +191,4 @@ print("Pt" in s)         # False
 8. str.find(sub)	     : Returns the lowest index of sub in the string (or -1 if not found)
 9. str.isdigit()	     : Returns True if all characters are digits
 10. str.isalpha()	     : Returns True if all characters are alphabetic
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
