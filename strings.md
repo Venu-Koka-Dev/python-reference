@@ -226,3 +226,16 @@ print("Pt" in s)         # False
 45. str.translate(table)                   : Applies a translation table to the string.
 46. str.zfill(width)                       : Pads the string with zeros on the left to make it the specified width.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# "Venu Rao Koka"
+fullName = "veNu rao kOka"   # fullName is an object/member/instance of a class str
+
+listWords = fullName.split(" ");  # ["veNu", "rao", "kOka"]
+
+for index, word in enumerate(listWords):  # word = "rao"  index = 1
+    listWords[index] = word.lower()  
+
+# listWords = ["venu", "rao", "koka"]
+for index, word in enumerate(listWords):  # index = 0 ; word = "venu"
+    listWords[index] = word.capitalize()
+
+print(" ".join(listWords))    # "venu rao koka"
