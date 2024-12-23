@@ -187,7 +187,7 @@ print("Pt" in s)         # False
  5. str.replace(old, new)                  : Replaces all occurrences of old with new
  6. str.split(delim)	                   : Splits the string into a list using delim as a delimiter
  7. str.join(iterable)	                   : Joins elements of iterable with the string as a separator
- 8. str.find(sub[, start[, end]])          : Returns the lowest index where the substring is found, or -1 if not found
+ 8. str.find(sub[, start[, end]])          : Returns the lowest index where the substring is found, or -1 if not found (Case sensitive)
  9. str.isdigit()	                       : Returns True if all characters are digits
 10. str.isalpha()	                       : Returns True if all characters are alphabetic
 11. str.capitalize()                       : Returns a copy of the string with the first character capitalized and the rest lowercased
