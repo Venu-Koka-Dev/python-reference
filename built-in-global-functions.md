@@ -43,7 +43,7 @@ type(object): Returns the type of an object.
 isinstance(object, classinfo): Checks if an object is an instance of a class.
 issubclass(class, classinfo): Checks if a class is a subclass of another class.
 id(object): Returns the memory address of an object.
-dir([object]): Lists attributes and methods of an object.
+dir([object]): Lists attributes and methods of an object
 vars([object]): Returns __dict__ attribute of an object.
 help([object]): Displays documentation for an object.
 
