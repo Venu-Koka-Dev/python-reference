@@ -4,7 +4,9 @@
     b. Local 
 2. What are functions ?
 3. Function definition & function calling/execution
-4. Default Parameters
+4. Required Positional arguments
+5. Default Parameters
+6.  Variable-Length Arguments
     
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # I. Scopes
@@ -32,7 +34,7 @@ print(dir())   # ['__annotations__', '__builtins__', '__cached__', '__doc__', '_
      c. Make programs easier to read and maintain
  - API of a function :
      a. Name of the function
-     b. Number of arguments/parameters
+     b. Number of arguments/parameters & type(required/default)
      c. Data type of each argument/parameter
      d. Order/Position of each argument/parameter
      e. Return value
@@ -154,7 +156,7 @@ else:
     print(f"The result of the operation is {result}")
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# IV. Required positional argument
+# IV. Required(Mandatory) positional(order) argument
 greet_message = input("Enter the greeting message that you want to print : ")
 
 def display(greet_message):
@@ -162,11 +164,32 @@ def display(greet_message):
 
 display(greet_message)   # greet_message is the required positional argument
 
-# V. Default Parameters
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# V. Default(Optional) Parameters
+# Default optional argument
+greet_message = input("Enter the greeting message that you want to print : ")
+name = input("Enter the name whom you want to greet :")
 
+def display(greet_message, name = "Guest"):  # name is the default(optional) parameter
+   print(f"{greet_message}: {name}")
 
+display(greet_message)
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# VI.  Variable-Length Arguments
+ - Two types :
+   a. *args: For positional arguments of variable length - Note: args is of type tuple
 
+## Ex 1: 
+def add(*l):
+    result = 0
+    for value in l:
+       result = result + value    
+    return result
+
+result = add(10, 20, 30, 40)
+
+print(result)
 
 
 
