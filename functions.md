@@ -4,7 +4,7 @@
     b. Local 
 2. What are functions ?
 3. Function definition & function calling/execution
-4. 
+4. Default Parameters
     
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # I. Scopes
@@ -30,6 +30,12 @@ print(dir())   # ['__annotations__', '__builtins__', '__cached__', '__doc__', '_
      a. Organize code
      b. Reduce redundancy, and
      c. Make programs easier to read and maintain
+ - API of a function :
+     a. Name of the function
+     b. Number of arguments/parameters
+     c. Data type of each argument/parameter
+     d. Order/Position of each argument/parameter
+     e. Return value
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # III. Function definition & function calling(execution)
   - General Syntax:
@@ -109,5 +115,62 @@ else:
     print("Oops!! Invalid operation entered!!")
     
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Ex. 5. Importing a function from a module (More sophisticated version)
+operations.py[MODULE]
+# Author : Uday CH (owner of the module operations.py)
+author = "Uday Chodisetti"
+
+def op(v1, v2, operator):
+    if operator == "a":
+       result = v1 + v2
+       return result
+    elif operator == "s":
+       result = v1 - v2
+       return result
+    elif operator == "m":
+       result = v1 * v2
+       return result
+    elif operator == "d":
+       result = v1 / v2
+       return result
+    else:
+       return "Not found"
+
+calculator.py[User]
+# Author : Vivek
+# Arithmetic Addition operation 
+import operations
+
+
+value1 = int(input("Enter the first number : "))
+value2 = int(input("Enter the second number : "))
+operation = input("Enter A for addition, S for subtraction, M for multiplication & D for division : ").lower()
+
+result = operations.op(value1, value2, operation)
+
+if result == "Not found":
+    print("Oops!! Wrong operation input")
+else:
+    print(f"The result of the operation is {result}")
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# IV. Required positional argument
+greet_message = input("Enter the greeting message that you want to print : ")
+
+def display(greet_message):
+   print(greet_message)
+
+display(greet_message)   # greet_message is the required positional argument
+
+# V. Default Parameters
+
+
+
+
+
+
+
+
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
