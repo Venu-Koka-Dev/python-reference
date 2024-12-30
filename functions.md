@@ -3,10 +3,12 @@
     a. Global
     b. Local 
 2. What are functions ?
-3. Function definition & function calling/execution
-4. Required Positional arguments
-5. Default Parameters
-6.  Variable-Length Arguments
+3. Types of functions - Builtin functions & User defined(Custom) functions
+4. Function definition & function calling/execution
+5. Required Positional arguments
+6. Default Parameters
+7.  Variable-Length Arguments
+8.  Techniques of function calling - Pass by value, Pass by Reference
     
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # I. Scopes
@@ -39,7 +41,13 @@ print(dir())   # ['__annotations__', '__builtins__', '__cached__', '__doc__', '_
      d. Order/Position of each argument/parameter
      e. Return value
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# III. Function definition & function calling(execution)
+# III. Types of functions 
+1. Built-in functions - 
+
+2. User defined functions
+   
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# IV. Function definition & function calling(execution)
   - General Syntax:
 def function_name(parameters):
     """Optional docstring to describe the function."""
@@ -156,7 +164,7 @@ else:
     print(f"The result of the operation is {result}")
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# IV. Required(Mandatory) positional(order) argument
+# V. Required(Mandatory) positional(order) argument
 greet_message = input("Enter the greeting message that you want to print : ")
 
 def display(greet_message):
@@ -165,7 +173,9 @@ def display(greet_message):
 display(greet_message)   # greet_message is the required positional argument
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# V. Default(Optional) Parameters
+# VI. Default(Optional) Parameters / Keyword parameters
+ - Arguments with default values are optional when calling the function. If omitted, the default value is used
+   
 # Default optional argument
 greet_message = input("Enter the greeting message that you want to print : ")
 name = input("Enter the name whom you want to greet :")
@@ -175,8 +185,17 @@ def display(greet_message, name = "Guest"):  # name is the default(optional) par
 
 display(greet_message)
 
+
+
+Note: Order within the default arguments not important but must be after positional arguments
+def task(message, name, gender = "Male", age = "24"):
+    print(f"{message} {gender} {name} with {age} years old")
+
+
+task("Good morning!", "Vani", age = "30", gender = "Female")
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# VI.  Variable-Length Arguments
+# VII.  Variable-Length Arguments (Varargs)
  - Two types :
    a. *args: For positional arguments of variable length - Note: args is of type tuple
 
@@ -191,9 +210,18 @@ result = add(10, 20, 30, 40)
 
 print(result)
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# VIII. Rules & best practices
+1. (Rule) Positional Arguments Must Precede Default Arguments
+   Ex. print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
+2. (Convention) While calling a function, maintain the exact sequence and use names for named default arguments
+## Ex 1 :   
+def task(message, name, gender = "Male", age = "24"):
+    print(f"{message} {gender} {name} with {age} years old")
 
 
+task("Good morning!", "Vani", gender =  "Female", age = "40")
 
-
+3. Mutable Default Arguments Should Be Avoided
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
