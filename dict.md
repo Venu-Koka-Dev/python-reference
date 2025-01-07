@@ -4,6 +4,7 @@
 3. Defining & Accessing elements
 4. Iterating
 5. Dictonary methods
+6. Dictionary Comprehension
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # I. What is dict ?
  -  Short for dictionary
@@ -60,6 +61,13 @@ if customer_info.get("email") is None:
     3. Loop Through Key-Value Pairs:
        for key, value in my_dict.items():
           print(key, value)
+
+    4. Using zip():
+       my_dict = dict(name='Alice', age=25, city='New York')
+       keys = ['name', 'age', 'city']
+       values = ['Alice', 25, 'New York']
+       my_dict = dict(zip(keys, values))
+       
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # V. Dictionary methods
 1. get(key[, default])	  : Returns the value for key, or default if the key is not found.
@@ -74,15 +82,11 @@ if customer_info.get("email") is None:
 10. pop(key[, default])	 : Returns the value for key & removes it from the dictionary, or default if key is not found
 11. popitem()	           : Removes and returns the last inserted key-value pair
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# VI. Zip() built-in function
+# VI. Dictionary Comprehension
 
 
-my_dict = dict(name='Alice', age=25, city='New York')
-3. Using zip():
 
-keys = ['name', 'age', 'city']
-values = ['Alice', 25, 'New York']
-my_dict = dict(zip(keys, values))
+
 
 
 
