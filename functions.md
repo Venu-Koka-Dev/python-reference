@@ -7,9 +7,10 @@
 4. Function definition & function calling/execution
 5. Required Positional arguments
 6. Default Parameters
-7.  Variable-Length Arguments
-8.  Techniques of function calling - Pass by value, Pass by Reference
-    
+7. Variable-Length Arguments
+8. Techniques of function calling - Pass by value, Pass by Reference
+9. Lambda functions
+10. Docstrings    
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # I. Scopes
 1. Global
@@ -240,4 +241,88 @@ task("Good morning!", "Vani", gender =  "Female", age = "40")
 
 3. Mutable Default Arguments Should Be Avoided
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# IX. Lambda functions (Anonymous Functions)
+ - A lambda function is a small, anonymous function defined with the lambda keyword
+ - It is typically used for short, throwaway functions
+ - Syntax :
+   lambda arguments: expression
+
+## Example 1:
+square = lambda x: x ** 2
+print(square(4))  # Prints 16
+
+## Example 2:
+sum = lambda value1, value2: value1 + value2
+print(sum(10, 20))
+
+## Example 3: Calculator (Using standard function definition)
+def add(v1, v2):
+    return v1 + v2
+
+def sub(v1, v2):
+    return v1 - v2
+
+def mul(v1, v2):
+    return v1 + v2
+
+def div(v1, v2):
+    return v1 / v2
+
+
+def computation(value1, value2, op = add):
+    print(op(value1, value2))
+
+computation(10, 20, op = div)
+
+## Example 4: Calculator (Using lambda function)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# X. Docstrings
+Docstrings
+Functions can have documentation strings (docstrings) that describe their purpose. This is done by placing a string literal immediately after the function definition.
+
+Example:
+
+python
+Copy code
+def greet(name):
+    """
+    This function prints a greeting message.
+    
+    Arguments:
+    name -- the name of the person to greet
+    """
+    print(f"Hello, {name}!")
+You can access a function's docstring using help() or the .__doc__ attribute.
+
+python
+Copy code
+print(greet.__doc__)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# XII. Function decorators
+13. Function Decorators
+A decorator is a function that wraps another function, modifying its behavior. It is often used for logging, access control, memoization, etc.
+
+Example of a simple decorator:
+
+python
+Copy code
+def decorator(func):
+    def wrapper():
+        print("Before function call")
+        func()
+        print("After function call")
+    return wrapper
+
+@decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+# Prints:
+# Before function call
+# Hello!
+# After function call
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
