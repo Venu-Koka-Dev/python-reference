@@ -195,11 +195,12 @@ def task(message, name, gender = "Male", age = "24"):
 task("Good morning!", "Vani", age = "30", gender = "Female")
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# VII.  Variable-Length Arguments (Varargs)
+# VII.  Variable-Length Arguments (Var args)
  - Two types :
-   a. *args: For positional arguments of variable length - Note: args is of type tuple
+   a. *args     : For positional arguments of variable length - Note: args is of type tuple
+   b. **kwargs  : For keyword arguments of variable length - Note: kwargs is of type dict
 
-## Ex 1: 
+## Ex 1: Using variable postional arguments
 def add(*l):
     result = 0
     for value in l:
@@ -207,8 +208,23 @@ def add(*l):
     return result
 
 result = add(10, 20, 30, 40)
-
 print(result)
+
+## Ex 2: Using variable keyword arguments
+def create_profile(**kwargs):   
+    print("User Profile:")
+    for key in kwargs:
+        print(f"{key}= {kwargs[key]}")
+
+create_profile(name="Alice", age=25, city="New York", profession="Engineer", gender="Male")
+
+## Ex 3: Using combination
+def demo(*args, **kwargs):
+    print(args)
+    print(kwargs)
+
+demo(10, 20, 30, 40, x = "Venu", y = "Uday")
+demo(10, 20, z = "Vani")
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # VIII. Rules & best practices
