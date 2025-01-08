@@ -5,14 +5,14 @@
 4. Iterating
 5. Dictonary methods
 6. Dictionary Comprehension
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # I. What is dict ?
  -  Short for dictionary
  -  It is an unordered collection of key-value pairs
  -  A complex data type
  -  Mutable data type
  -  They allow fast lookups, additions, and updates
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # II. Key Features
  1. Key-Value pairs : so each key is associated with a value
  2. Keys must be immutable (e.g., strings, numbers, tuples) - but recommended strings
@@ -23,7 +23,7 @@
  6. Mutable data type - you can add, remove, or modify key-value pairs in a dictionary in-place
  7. Iterable type
  8. Hashing : Keys are hashed for quick lookups, making dictionary operations efficient
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # III. Defining & Accessing elements
  - Two ways :
     a. Using keys - RECOMMENDED
@@ -47,7 +47,7 @@ print(customer_info.get("email", "venu.koka@gmail.com"))    # Default value
 if customer_info.get("email") is None:
     print("admin@gmail.com")
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # IV. Iterating
  - Multiple ways
     1. Loop Through Keys:
@@ -81,8 +81,44 @@ if customer_info.get("email") is None:
 9. setdefault(key[, v])	 : Returns the value for key if it exists; otherwise, inserts key with value v.
 10. pop(key[, default])	 : Returns the value for key & removes it from the dictionary, or default if key is not found
 11. popitem()	           : Removes and returns the last inserted key-value pair
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # VI. Dictionary Comprehension
+ - It is a concise way to create dictionaries from an iterable in Python.
+ - It allows you to generate a new dictionary by applying an expression to each element of an iterable, with optional conditions to filter elements
+ - It makes the code cleaner, more readable, and more efficient compared to using a traditional for loop for the same purpose
+ - Basic syntax:
+   {key_expression: value_expression for item in iterable if condition}
+
+
+## Example 1:
+numbers = [1, 2, 3, 4]
+square_dict = {value: value ** 2 for value in numbers if value % 2 == 0}
+print(square_dict)  # {1: 1, 2: 4, 3: 9, 4: 16}
+
+## Example 2: Using filter condition to get only even numbers
+numbers = [1, 2, 3, 4]
+square_dict = {value: value ** 2 for value in numbers if value % 2 == 0}
+print(square_dict)  # {2: 4, 4: 16}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
