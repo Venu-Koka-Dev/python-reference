@@ -9,10 +9,11 @@
 6. Default Parameters
 7. Variable-Length Arguments
 8. Techniques of function calling - Pass by value, Pass by Reference
-9. Lambda functions
-10. Docstrings
-11. Decorators
-12. Generator functions
+9. Higher order function - TODO
+10. Lambda functions
+11. Docstrings
+12. Decorators
+13. Generator functions
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # I. Scopes
 1. Global
