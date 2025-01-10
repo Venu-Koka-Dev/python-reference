@@ -85,21 +85,12 @@ print("Outside function, x =", x)
      e. Return value
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # III. Types of functions 
-1. Built-in functions
-    - Predefined functions provided by Python that you can use directly without the need to import any module
-
-I. Input/Output Functions :  These functions handle input from the user and display output.
-print()	Displays output to the console.
-input()	Takes input from the user.
-open()	Opens a file for reading/writing.
-
-II. 
-3. User defined functions
-   
+1. Built-in functions     : Predefined functions provided by Python that you can use directly without the need to import any module
+2. User defined functions : Defined as per our requirement  
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # IV. Function definition & function calling(execution)
   - General Syntax:
-def function_name(parameters):
+def function_name(param1, param2, ...):
     """Optional docstring to describe the function."""
     # Function body
     return result  # Optional
@@ -328,26 +319,16 @@ computation(10, 20, op = div)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # X. Docstrings
-Docstrings
-Functions can have documentation strings (docstrings) that describe their purpose. This is done by placing a string literal immediately after the function definition.
+ - Functions can have documentation strings (docstrings) that describe their purpose
+ - This is done by placing a string literal immediately after the function definition
+ - You can access a function's docstring using help() or the .__doc__ attribute
 
-Example:
-
-python
-Copy code
+### Ex 1:
 def greet(name):
-    """
-    This function prints a greeting message.
-    
-    Arguments:
-    name -- the name of the person to greet
-    """
+    """ This function prints a greeting message """
     print(f"Hello, {name}!")
-You can access a function's docstring using help() or the .__doc__ attribute.
 
-python
-Copy code
-print(greet.__doc__)
+print(greet.__doc__)    #  This function prints a greeting message
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # XII. Function decorators
