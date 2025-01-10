@@ -16,21 +16,60 @@
 13. Generator functions
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # I. Scopes
-1. Global
+ - Scope refers to the region of a program where a particular variable can be accessed
    
-### Ex 1: 
-message = input("Enter the message you want to display: ")   # Scope: Global variable
-print(dir())   # ['__annotations__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'message'] 
+1. Global scope
+   
+### Ex 1: To list out variables in global scope
+x = 10             # Scope: Global variable
+print(dir())       # ['__annotations__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'x'] 
+print(globals())   # {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader object at 0x0000023204A49CD0>, 
+                      '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': 'c:\\Users\\91703\\Desktop\\python-project\\calculator.py', 
+                      '__cached__': None, 'x': 10
+                     }
 
-###
+### Ex 2: In REPL mode
 >>> dir()
 ['__annotations__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__']
 >>> __builtins__
 <module 'builtins' (built-in)>
 >>>import builtins
 >>>print(dir(builtins))
+>>>
 
-3. Local variable
+### Ex 3: To list out variables in local scope
+x = 10
+print(dir())              # ['__annotations__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'x']
+def demo(y = 20):
+   print(y)
+   print(dir())           # ['y']
+
+### Ex 4: Modifying a Global Variable Inside a Function (NOT RECOMMENDED)
+x = 10 
+print(x)   # 10 (Global)
+
+def demo(y = 30):
+    global x
+    x = 20    
+    print(x)   # 20 (Global)
+    
+print(x)   # 10 (Global)
+demo()
+print(x)   # 20 (Global)
+
+
+2. Local scope
+   - A variable is said to have a local scope if it is defined inside a function
+   - Such variables are only accessible within that function and are destroyed once the function exits
+  
+### Ex 1: If a local variable shares the same name as a global variable, the function will use the local variable instead of the global one.
+x = 50                                 # Global variable
+def change_value(x = 20):      
+    print("Inside function, x =", x)   # (20) Local variable
+
+change_value()
+print("Outside function, x =", x)
+     
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # II. What are functions ?
  - A function in Python is a block of reusable code designed to perform a specific task
@@ -46,9 +85,16 @@ print(dir())   # ['__annotations__', '__builtins__', '__cached__', '__doc__', '_
      e. Return value
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # III. Types of functions 
-1. Built-in functions - 
+1. Built-in functions
+    - Predefined functions provided by Python that you can use directly without the need to import any module
 
-2. User defined functions
+I. Input/Output Functions :  These functions handle input from the user and display output.
+print()	Displays output to the console.
+input()	Takes input from the user.
+open()	Opens a file for reading/writing.
+
+II. 
+3. User defined functions
    
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # IV. Function definition & function calling(execution)
