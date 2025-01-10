@@ -3,31 +3,32 @@
  - These functions simplify a wide range of tasks 
 
 ## 1. Type Conversion Functions
-int(x, base=10): Converts x to an integer.
-float(x): Converts x to a floating-point number.
-str(x): Converts x to a string.
-bool(x): Converts x to a boolean.
-list(iterable): Converts an iterable to a list.
-tuple(iterable): Converts an iterable to a tuple.
-set(iterable): Converts an iterable to a set.
-dict(**kwargs): Creates a dictionary.
-complex(real, imag): Creates a complex number.
+int(x, base=10)         : Converts x to an integer.
+float(x)                : Converts x to a floating-point number.
+str(x)                  : Converts x to a string.
+bool(x)                 : Converts x to a boolean.
+list(iterable)          : Converts an iterable to a list.
+tuple(iterable)         : Converts an iterable to a tuple.
+set(iterable)           : Converts an iterable to a set.
+dict(**kwargs)          : Creates a dictionary.
+complex(real, imag)     : Creates a complex number.
 bytes(source, encoding, errors): Creates a bytes object.
 chr(i): Converts an integer to a Unicode character.
 ord(c): Converts a Unicode character to its integer representation.
 
 ## 2. Mathematical and Logical Functions
-abs(x): Returns the absolute value of x.
-pow(x, y[, z]): Computes x raised to the power y (modulo z if provided).
-round(number[, ndigits]): Rounds a number to ndigits precision.
-divmod(x, y): Returns a tuple (quotient, remainder).
-min(iterable, *args): Returns the smallest value.
-max(iterable, *args): Returns the largest value.
-sum(iterable, start=0): Returns the sum of an iterable.
+abs(x)                         : Returns the absolute value of x
+pow(x, y[, z])                 : Computes x raised to the power y (modulo z if provided)
+round(number[, ndigits])       : Rounds a number to ndigits precision
+divmod(x, y)                   : Returns a tuple (quotient, remainder)
+min(iterable, *args)           : Returns the smallest value
+max(iterable, *args)           : Returns the largest value
+sum(iterable, start=0)         : Returns the sum of an iterable
 
 ## 3. Input/Output Functions
-print(*objects, sep=' ', end='\n', file=sys.stdout): Prints objects to the console.
-input(prompt): Reads input from the user.
+print(*objects, sep=' ', end='\n', file=sys.stdout)  : Prints objects to the console.
+input(prompt)                                        : Reads input from the user.
+open()	                                              : Opens a file for reading/writing.
 
 ## 4. Iterable and Sequence Manipulation
 len(s): Returns the length of an object.
