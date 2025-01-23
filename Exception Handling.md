@@ -25,7 +25,11 @@
 # III. Handling Exceptions
  - Multiple ways:
     a. Using decision making statements like if..else or ternary operators
-    b. Using try..except
+    b. Using try..except..else..finally
+        - try: Code block where exceptions might occur
+        - except: Handles specific exceptions
+        - else: Executes if no exception occurs
+        - finally: Executes regardless of whether an exception occurred
 
 #### Example 1: Handling runtime errors using if-else conditions & printing meaningful output error messages to the end user
 value1 = int(input("Enter the first number:"))
@@ -65,4 +69,24 @@ except TypeError as e:
 except Exception as e:
     print(f"An error occurred: {e}")
 
-  
+#### Example 3: 
+try:
+    # Attempt to open the file and read its contents
+    file = open("example.txt", "r")
+    content = file.read()
+except FileNotFoundError:
+    # Handle the case where the file doesn't exist
+    print("Error: The file was not found.")
+except IOError:
+    # Handle other I/O errors
+    print("Error: An I/O error occurred while accessing the file.")
+else:
+    # Process the file contents if no exceptions occur
+    print("File content successfully read:")
+    print(content)
+finally:
+    # Ensure the file is closed no matter what
+    file.close()
+    print("File closed.")
+    
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
