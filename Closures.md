@@ -19,7 +19,7 @@
     b. The variables of the enclosing function (nonlocal scope).
     c. The global variables (if not shadowed by a local variable).
  - When the outer function returns the inner function, the inner function keeps a reference to the environment (or closure), which includes the variables in the outer function’s scope.
-
+----------------------------------------------------------------
 #### Example 1: Simple scenario
 # secret = "12345"   # Global (Highly insecure)
 x = 10               # Global scope
@@ -33,10 +33,22 @@ def outer_function():      # Outer function (Enclosing)
         print(y)           # local
     return greet
     
-# Calling environment
-myFunc = outer_function()
+
+myFunc = outer_function()  # Calling environment  
 myFunc()
 
+----------------------------------------------------------------
+#### Example 2: Calling closure multiple times
+def outer_function(x):
+    def inner_function(y):
+        return x + y
+    return inner_function
+
+closure = outer_function(10)   # Creating a closure
+
+# Using the closure
+print(closure(5))    # Output: 15
+print(closure(20))   # Output: 30
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #### III. Use cases
 #### Example 1: 
