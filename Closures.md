@@ -11,6 +11,10 @@
     b. Access to Outer Variables: The inner function can access variables declared in the enclosing (outer) function, even after the outer function has finished execution.
     c. Returned Function: The outer function must return the inner function for it to be a closure.
     d. State Retention: The inner function "remembers" the variables from its enclosing scope without re-evaluating them
+ - Benefits of Closures:
+    a. Encapsulation: Closures help encapsulate functionality, as they can hide variables from the global scope
+    b. State Preservation: They allow functions to maintain a state across invocations without relying on global variables
+    c. Higher-Order Functions: Closures are useful in functional programming and can help create dynamic behaviors by customizing functions.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #### II. How Closures Work:
@@ -75,6 +79,8 @@ print(counter_instance())  # Output: 3
 
 -----------------------------------------------------------------------
 #### Example 2: To log number of database connections established
+![Hiding the counter logic in the database connection](./assets/closure-with-db-counter.PNG)
+
 # Defined by Uday
 def connect_db():   # Outer function (Enclosing)
     count = 0
