@@ -61,6 +61,8 @@ print(closure(20))   # Output: 30
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #### III. Use cases
 #### Example 1: A simple counter
+![Hiding the counter logic in the database connection](./assets/closure-with-db-counter.PNG)
+
 def make_counter():
     count = 0
     def counter():
@@ -79,7 +81,7 @@ print(counter_instance())  # Output: 3
 
 -----------------------------------------------------------------------
 #### Example 2: To log number of database connections established
-![Hiding the counter logic in the database connection](./assets/closure-with-db-counter.PNG)
+![Hiding the counter logic in the database connection](./assets/closure-connect-db-count.PNG)
 
 # Defined by Uday
 def connect_db():   # Outer function (Enclosing)
