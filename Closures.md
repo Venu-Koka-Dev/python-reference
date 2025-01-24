@@ -21,6 +21,8 @@
  - When the outer function returns the inner function, the inner function keeps a reference to the environment (or closure), which includes the variables in the outer function’s scope.
 ----------------------------------------------------------------
 #### Example 1: Calling closure without argument
+![Calling closure without argument](./assets/closure-without-arg.PNG)
+
 # secret = "12345"   # Global (Highly insecure)
 x = 10               # Global scope
 
@@ -39,6 +41,8 @@ myFunc()
 
 ----------------------------------------------------------------
 #### Example 2: Calling closure with argument
+![Calling closure without argument](./assets/closure-with-arg.PNG)
+
 def outer_function(x):
     def inner_function(y):
         return x + y
