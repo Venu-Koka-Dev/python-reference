@@ -20,7 +20,7 @@
     c. The global variables (if not shadowed by a local variable).
  - When the outer function returns the inner function, the inner function keeps a reference to the environment (or closure), which includes the variables in the outer function’s scope.
 ----------------------------------------------------------------
-#### Example 1: Simple scenario
+#### Example 1: Calling closure without argument
 # secret = "12345"   # Global (Highly insecure)
 x = 10               # Global scope
 
@@ -38,7 +38,7 @@ myFunc = outer_function()  # Calling environment
 myFunc()
 
 ----------------------------------------------------------------
-#### Example 2: Calling closure multiple times
+#### Example 2: Calling closure with argument
 def outer_function(x):
     def inner_function(y):
         return x + y
