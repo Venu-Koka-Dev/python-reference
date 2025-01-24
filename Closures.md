@@ -53,6 +53,52 @@ closure = outer_function(10)   # Creating a closure
 # Using the closure
 print(closure(5))    # Output: 15
 print(closure(20))   # Output: 30
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #### III. Use cases
-#### Example 1: 
+#### Example 1: A simple counter
+def make_counter():
+    count = 0
+    def counter():
+        nonlocal count  # Refers to the count in the enclosing scope
+        count += 1
+        return count
+    return counter
+
+# Create a counter
+counter_instance = make_counter()
+
+# Increment the counter
+print(counter_instance())  # Output: 1
+print(counter_instance())  # Output: 2
+print(counter_instance())  # Output: 3
+
+-----------------------------------------------------------------------
+#### Example 2: To log number of database connections established
+# Defined by Uday
+def connect_db():   # Outer function (Enclosing)
+    count = 0
+    def connect():    # Inner function (Nested)
+        nonlocal count  # Refers to the count in the enclosing scope
+        count += 1
+        print("Connected to database")
+        return count
+    return connect
+
+# Anil
+db_connection = connect_db()
+db_connection()
+print(f"No of connections established till now: {db_connection()}") 
+
+Output:
+Connected to database
+Connected to database
+No of connections established till now: 2
+
+-----------------------------------------------------------------------
+
+
+
+
+
+
