@@ -104,9 +104,57 @@ Connected to database
 No of connections established till now: 2
 
 -----------------------------------------------------------------------
+#### Example 3: Closure with Decorators
+ - Closures are commonly used in decorators to enhance or modify the behavior of functions
+ - In Python, decorators are a powerful and flexible way to modify or extend the behavior of functions or classes without permanently modifying their code
+   
+def log_decorator(func):               
+    def wrapper(*args, **kwargs):      
+        print(f"Calling {func.__name__} with {args} and {kwargs}")
+        result = func(*args, **kwargs)
+        print(f"{func.__name__} returned {result}")
+        return result
+    return wrapper                     
+
+
+def add(a, b):
+    return a + b
+
+myFunc = log_decorator(add)
+myFunc(3,5)
+
+(or)
+
+# Using decorator syntax (Just a syntactic sugar)
+@log_decorator
+def add(a, b):
+    return a + b
+
+add(3, 5)
+
+-----------------------------------------------------------------------
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------
 
 
