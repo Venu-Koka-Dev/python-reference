@@ -2,7 +2,7 @@
 1. What is Object oriented programming ?
 2. Object(Instance) Vs Class
 3. Defining a Custom class (data structure)
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # I. What is Object oriented programming ?
  - Object-Oriented Programming (OOP) is a programming paradigm
  - It structures software design around objects, which are instances of classes
@@ -12,7 +12,7 @@
     2. Inheritance
     3. Polymorphism
     4. Abstraction
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # II. Object (Instance) Vs Class
 
 ## What is a class ?
@@ -38,14 +38,42 @@ personalInfo = {        # dict
  "email": "venu@gmail.com"
 }
  
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # III. Defining a Custom class (data structure)
 - A method is a function but defined inside a class
 
+#### Example 1: Defining a simple class with constructor 
+class PythonStudent:
+    def __init__(self, fName, lName, s_age):
+        self.firstName = fName
+        self.lastName = lName
+        self.age = s_age
 
+    def displayFullName(self):
+        return self.firstName + " " + self.lastName
+        
+    def isAdult(self):
+        if self.age > 18:
+            return True
+        else:
+            return False
+            
+    def greet(self):
+        return "Hello!! " + self.firstName  
 
+    def greet(self, message):
+        return message + " " + self.firstName  
+            
 
+student1 = PythonStudent("Vivek", "Madereddi", 27)
+student2 = PythonStudent("Anil", "Kethu", 12)
 
+print(student1.displayFullName())
+print(student1.isAdult())
+print(student2.isAdult())
+print(student1.greet("Good morning!!"))
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
