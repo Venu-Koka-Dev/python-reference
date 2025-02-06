@@ -8,7 +8,7 @@
  - It structures software design around objects, which are instances of classes
  - Python is an Object-oriented language
  - It supports OOP principles such as :
-    1. Encapsulation
+    1. Encapsulation - principle of restricting direct access to some data and methods to prevent unintended modifications
     2. Inheritance
     3. Polymorphism
     4. Abstraction
@@ -65,7 +65,7 @@ class PythonStudent:
         return message + " " + self.firstName  
             
 
-student1 = PythonStudent("Vivek", "Madereddi", 27)
+student1 = PythonStudent("Vivek", "Madereddi", 27)     // Instantiation (creating an object)
 student2 = PythonStudent("Anil", "Kethu", 12)
 
 print(student1.displayFullName())
@@ -74,9 +74,40 @@ print(student2.isAdult())
 print(student1.greet("Good morning!!"))
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# IV. Encapsulation
+  - Encapsulation is the principle of restricting direct access to some data and methods to prevent unintended modifications.
+  - Python doesn't support any explicit access modifiers but has a convention for: Public, Protected, and Private Members
+     a. Public                  : Accessible from anywhere.
+     b. Protected (_variable)   : Suggests restricted access (convention-based)
+     c. Private (__variable)    : Not directly accessible from outside the class (rule-based)
+
+#### Example:
+class BankAccount:
+    def __init__(self, name, account_number, balance):
+        self.name = name                        # Public
+        self.account_number = account_number    # Public
+        self._balance = balance                 # Protected
+        self.__pin = 1234                       # Private
+
+    def deposit(self, amount):
+        self._balance += amount
+
+    def get_balance(self):
+        return self._balance
 
 
+account = BankAccount("Venu", "123456", 1000)   # Instantiation (Object creation step)
+print(account.name)                             # (RECOMMENDED) Public property is Accessible
+print(account.account_number)                   # (RECOMMENDED) Public property is Accessible
+print(account._balance)                         # (NOT RECOMMENDED) Protected property can also be accessed but do not do it like this
+print(account.__pin)                            # (NOT ALLOWED) Private property is not accessible from outside the class and it will raise an AttributeError
 
+print(account.get_balance())                    # (SOLUTION) Accessing a protected property
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# V. Inheritance
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
